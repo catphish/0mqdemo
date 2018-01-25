@@ -1,0 +1,16 @@
+Put this in your pipe and smoke it.
+
+```
+sudo apt install libzmq3-dev
+gem install ffi-rzmq
+```
+
+Start some workers, then start the output receiver, then start
+the job producer to make some tasks.
+
+```
+ruby worker.rb
+ruby worker.rb
+ruby sink.rb
+ruby producer.rb
+```
